@@ -160,8 +160,9 @@ p .caption, span .caption {
 	display: grid;
 	-ms-grid-columns: 2fr 10fr;
 	grid-template-columns: 2fr 10fr;
-	-ms-grid-rows: 80px;
-	grid-template-rows: 80px;
+	-ms-grid-rows: auto;
+	grid-template-rows: auto;
+	margin-bottom: 10px;
 	grid-area: h
 }
 .header h1 {
