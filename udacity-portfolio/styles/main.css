@@ -236,7 +236,8 @@ header {
     "w w w w w w w w w w w w"
 }
 .full-width {
-	grid-area: i
+	grid-area: i;
+	clear: both
 }
 .hero-img-container {
 	position: relative;
