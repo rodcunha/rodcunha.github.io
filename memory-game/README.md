@@ -2,21 +2,19 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [The Game](#thegame)
+* [What I have used to build the game](#tools)
+* [To Do](#todo)
 * [Contributing](#contributing)
 
-## Table of Contents
 
-
-## The Game
+## <a name="thegame"></a>The Game
 
 ### How To Play?
 
 You can download or clone the repo and run the `index.html` file on your local system.
 
 Alternatively you can [Play Here](https://rodcunha.github.io/memory-game/)
-
-### The game
 
 You are given 8 pairs of cards (currently themed Paw Patrol).
 
@@ -26,23 +24,23 @@ You will need to pair the cards that are equal by revealing two cards at the tim
 
 Every time you reveal 2 cards, 1 move is counted. Your current number of moves is displayed above the game board at all times.
 
-Together with the number of moves your performance is graded with stars. You start with 3 stars, if you resolve the game in under 15 moves, you will be awarded 3 stars, if you resolve the game between 15 and 30 moves you will be awarded 2 stars and if you take more than 30 moves to resolve the game you will be awarded 1 star.
+Together with the number of moves your performance is graded with stars. You start with 3 stars, if you resolve the game in under 15 moves, you will be awarded 3 stars, if you resolve the game between 15 and 30 moves you will be awarded 2 stars and if you take more than 25 moves to resolve the game you will be awarded 1 star.
 
-## What I've used to build this
+## <a name="tools"></a>What have used to build this
 
 This was based on the started project files given by Udacity and built using the following:
 
-..* HTML, CSS & JavaScript;
-..* Star graphics by [Font Awesome](https://fontawesome.com/);
-..* Paw Patrol Graphics from [Paw Patrol Wikia] (http://paw-patrol.wikia.com);
-..* Trophy image from: [Lao Blogger](http://laoblogger.com);
-..* Typeface Montserrat by [Google Fonts](https://fonts.google.com);
+  * HTML, CSS & JavaScript;
+  * Star graphics by [Font Awesome](https://fontawesome.com/);
+  * Paw Patrol Graphics from [Paw Patrol Wikia] (http://paw-patrol.wikia.com);
+  * Trophy image from: [Lao Blogger](http://laoblogger.com);
+  * Typeface Montserrat by [Google Fonts](https://fonts.google.com);
 
-## TO DO
+## <a name="todo"></a>TO DO
 
-..* I would like to add different themed decks. (Ie. Avengers, Star Wars, Gumball, Pokemon, etc)
-..* I would like to add a difficulty level choice (Easy, Medium & Hard). See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
-..* I would like to Introduce a leaderboard that can be recorded, to add a competitive element.
+ * I would like to add different themed decks. (Ie. Avengers, Star Wars, Gumball, Pokemon, etc)
+ * I would like to add a difficulty level choice (Easy, Medium & Hard). See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+ * I would like to Introduce a leaderboard that can be recorded, to add a competitive element.
 
 ## Contributing
 
