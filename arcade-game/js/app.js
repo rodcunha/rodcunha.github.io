@@ -7,6 +7,7 @@ const gameWinModal = document.querySelector('#game-win'); // win game modal
 const gameLooseModal = document.querySelector('#game-over'); // game over modal
 const gameModal = document.querySelectorAll('.modal'); // start game Modal
 const gameCanvas = document.getElementsByTagName('canvas'); // selects the canvas element
+const startButtons = document.querySelectorAll('.btnStart'); // selects all the start buttons
 const enemySprite = 'images/enemy-bug.png'; // enemy image
 let allEnemies = []; // array to store the enemies
 let gotToWater = 0;
@@ -269,6 +270,11 @@ const closeModal = () => {
 const showStartModal = () => { startModal.style.display = "block"; };
 const showWinModal = () => { gameWinModal.style.display = "block"; };
 const showLooseModal = () => { gameLooseModal.style.display = "block"; };
+const closeAllModals = () => {
+  gameModal.forEach( e => {
+    e.style.display = "none";
+  })
+};
 
 //modal trigger on load
 window.onload = () => {
@@ -289,7 +295,7 @@ let isIntervalRunning;
 // start game function
 function startGame() {
   allEnemies = [];
-  startModal.style.display = "none";
+  closeAllModals();
   score = 0;  //resets score
   player.lives = 3; // resets lives
   gameIsRunning = true; // set gameIsRunning variable
