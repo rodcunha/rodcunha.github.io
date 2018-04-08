@@ -9,12 +9,14 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-h1, h3 {
+h1,
+h3 {
   font-weight: 700;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-h2, h4 {
+h2,
+h4 {
   font-weight: 300;
   font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -40,12 +42,12 @@ kbd {
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   border-radius:3px;
-  background:-moz-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:-moz-linear-gradient(to left, #ffffff 0%, #e2e2e2 25%);
   background:-webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(25%, #e2e2e2));
-  background:-webkit-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
-  background:-o-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
-  background:-ms-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
-  background:linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:-webkit-linear-gradient(to left, #ffffff 0%, #e2e2e2 25%);
+  background:-o-linear-gradient(to left, #ffffff 0%, #e2e2e2 25%);
+  background:-ms-linear-gradient(to left, #ffffff 0%, #e2e2e2 25%);
+  background:linear-gradient(to left, #ffffff 0%, #e2e2e2 25%);
 }
 
 button {
@@ -67,7 +69,7 @@ button.restart {
 }
 
 button.restart:hover {
-  background: linear-gradient(to right, ##80CBC4, ##2196F3);
+  background: linear-gradient(to right, #80CBC4, ##2196F3);
 }
 
 .light {
@@ -92,7 +94,7 @@ button.restart:hover {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: none; /* Enable scroll if needed */
+    overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -126,7 +128,6 @@ button.restart:hover {
 .modal button {
   font-size: 17px;
   padding: 5px 20px;
-  background: linear-gradient('red', 'blue');
 }
 
 #start-game {

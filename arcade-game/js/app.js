@@ -1,3 +1,5 @@
+'use strict';
+
 const scoreElem = document.querySelector('#score'); //html score element
 const livesElem = document.querySelector('#lives'); // html lives element
 const startModal = document.querySelector('#start-game'); // starter modal
@@ -5,8 +7,6 @@ const gameWinModal = document.querySelector('#game-win'); // win game modal
 const gameLooseModal = document.querySelector('#game-over'); // game over modal
 const gameModal = document.querySelectorAll('.modal'); // start game Modal
 const gameCanvas = document.getElementsByTagName('canvas'); // selects the canvas element
-const startBtn = document.querySelector('#btnStart');
-const closeBtn = document.querySelectorAll('.btnClose');
 const enemySprite = 'images/enemy-bug.png'; // enemy image
 let allEnemies = []; // array to store the enemies
 let gotToWater = 0;
@@ -50,13 +50,16 @@ class Enemy extends Element { //create the Enemy object and assigns the values
     this.x += this.speed * dt;
   }
   loopEnemy() {
-    allEnemies.forEach( bug => {
-      if (bug.x > 600) {
-        bug.x = random_x();
-        bug.y = random_y();
-        bug.speed = random_speed();
-      }
-  });
+  //   allEnemies.forEach( bug => {
+  //     if (bug.x > 600) {
+  //       bug.x = random_x();
+  //       bug.y = random_y();
+  //       bug.speed = random_speed();
+  //     }
+  // });
+         this.x = random_x();
+         this.y = random_y();
+         this.speed = random_speed();
   }
 }
 
@@ -89,7 +92,7 @@ class Player extends Element { // Create the Player class as an extension of Ele
        closeModal();
        setTimeout( () => {
           showLooseModal();
-       }, 30)
+       }, 30);
     }
     showLives();
   }
@@ -127,13 +130,13 @@ class Player extends Element { // Create the Player class as an extension of Ele
           if (this.x > 0) {
             this.x -=100;
           }
-          gems.getGem(player, gems);
+          gems.getGem(this, gems);
           break;
         case 'right':
           if (this.x < 399) {
             this.x +=100;
           }
-          gems.getGem(player, gems);
+          gems.getGem(this, gems);
           break
         case 'up':
           if (this.y > 0) {
@@ -141,13 +144,13 @@ class Player extends Element { // Create the Player class as an extension of Ele
             if (this.y < 68) {
               this.reachedWater();
             }
-            gems.getGem(player, gems);
+            gems.getGem(this, gems);
           }
           break;
         case 'down':
           if (this.y < 399) {
             this.y += 83;
-            gems.getGem(player, gems);
+            gems.getGem(this, gems);
           }
           break;
       }
@@ -185,14 +188,14 @@ const gemRandomX = gemXLocation.length;
 
 const getXLocation = (num) => {
   return gemXLocation[Math.floor( Math.random() * Math.floor(num) )];
-}
+};
 
 const pulsate = (elem) => {
     elem.classList.add('pulsate');
   setTimeout( () => {
     elem.classList.remove('pulsate');
   }, 3000);
-}
+};
 
 //Create the gems object (class)
 class Gem extends Element {
@@ -239,7 +242,7 @@ class Gem extends Element {
 }
 
 // Instantiate the enemies function
-var create_enemies = (num) => {
+const create_enemies = (num) => {
 
   for (var i = 0; i < num; i++) {
       var bug = new Enemy(random_x(), random_y(), enemySprite);
@@ -248,6 +251,12 @@ var create_enemies = (num) => {
     }
 };
 
+allEnemies.forEach( e => {
+  if (e.x >= 550) {
+    e.loopEnemy();
+  }
+})
+
 const closeModal = () => {
   gameModal.forEach( e => {
     e.style.display = 'none';
@@ -255,23 +264,23 @@ const closeModal = () => {
     player =new Player(-100, -100, 'images/char-boy.png');
     gems = new Gem(-99,-99,  gemImage);
   });
-}
+};
 
-const showStartModal = () => { startModal.style.display = "block"; }
-const showWinModal = () => { gameWinModal.style.display = "block"; }
-const showLooseModal = () => { gameLooseModal.style.display = "block"; }
+const showStartModal = () => { startModal.style.display = "block"; };
+const showWinModal = () => { gameWinModal.style.display = "block"; };
+const showLooseModal = () => { gameLooseModal.style.display = "block"; };
 
 //modal trigger on load
 window.onload = () => {
     showStartModal();
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = event => {
     if (event.target == startModal) {
         closeModal();
     }
-}
+};
 
 let player = new Player(200, 400, 'images/char-boy.png');
 let gems = new Gem(getXLocation(gemRandomX), random_y(), gemImage);
@@ -290,7 +299,7 @@ function startGame() {
   showLives();
   showScore();
   isIntervalRunning ? setTimeout( () => {isIntervalRunning = false}, 4001) : randomGem();
-}
+};
 
 // create a gem every 4 seconds at a random location.
 const randomGem = () => {
@@ -303,17 +312,17 @@ const randomGem = () => {
   } else {
     setTimeout( () => {isIntervalRunning = false}, 4000);
   }
-}
+};
 
 // Display the score on the header
 const showScore = () => {
    scoreElem.innerText = score;
-}
+};
 
 // display the number of lives of the player
 const showLives = () => {
   livesElem.innerText = player.lives;
-}
+};
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.

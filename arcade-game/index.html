@@ -32,8 +32,10 @@
               </p>
               <p>Make sure you don't get bitten by a bug!!</p>
         </div>
-        <button id="btnStart" onclick="startGame()">Start game</button>
+        <button class="btnStart" onclick="startGame()">Start game</button>
         <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
+      </div>
+    </div>
 
         <!-- Game Over Modal -->
         <div id="game-over" class="modal">
@@ -42,10 +44,10 @@
           <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 class="uppercase light">Oh! No! You died too many times!!!</h2>
-            <div id="instructions" class="hidden">
+            <div id="over" class="hidden">
                   <h3>Try Again?</h3>
             </div>
-            <button id="btnStart" onclick="startGame()">Yes. Of Course!</button>
+            <button class="btnStart" onclick="startGame()">Yes. Of Course!</button>
             <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
 
       </div>
@@ -58,10 +60,10 @@
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 class="uppercase light">Fantastic! You've made it to 1000 points!</h2>
-        <div id="instructions" class="hidden">
+        <div id="win" class="hidden">
               <h3>Can you do better next time?</h3>
         </div>
-        <button id="btnStart" onclick="startGame()">Yes. Of Course!</button>
+        <button class="btnStart" onclick="startGame()">Yes. Of Course!</button>
         <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
 
   </div>
