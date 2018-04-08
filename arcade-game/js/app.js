@@ -291,7 +291,7 @@ function startGame() {
   allEnemies = [];
   startModal.style.display = "none";
   score = 0;  //resets score
-  lives = 3; // resets lives
+  player.lives = 3; // resets lives
   gameIsRunning = true; // set gameIsRunning variable
   create_enemies(8); //creates the enemies in random locations
   player = new Player(200, 400, 'images/char-boy.png'); // creates a new player object
