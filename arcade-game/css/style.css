@@ -1,0 +1,164 @@
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1, h3 {
+  font-weight: 700;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h2, h4 {
+  font-weight: 300;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 60px;
+  background-color: #444;
+  color: #FEFEFE;
+}
+
+kbd {
+  border:1px solid gray;
+  padding:1px 5px;
+  margin:0 5px;
+  font-size:1.5em;
+  text-transform:uppercase;
+  -webkit-box-shadow:1px 0 1px 0 #fff, 0 2px 0 2px lightGray, 0 2px 0 3px #333;
+  -moz-box-shadow:1px 0 1px 0 #fff, 0 2px 0 2px lightGray, 0 2px 0 3px #333;
+  box-shadow:1px 0 1px 0 #fff, 0 2px 0 2px lightGray, 0 2px 0 3px #333;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  background:-moz-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:-webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(25%, #e2e2e2));
+  background:-webkit-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:-o-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:-ms-linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+  background:linear-gradient(left, #ffffff 0%, #e2e2e2 25%);
+}
+
+button {
+  padding: 8px 16px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background: #BBDEFB;
+  font-size: 1em;
+}
+
+button.restart {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+  background: linear-gradient(to right, #E0F2F1, #BBDEFB);
+  transition: 0.4s;
+}
+
+button.restart:hover {
+  background: linear-gradient(to right, ##80CBC4, ##2196F3);
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display:none;
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 75%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal button {
+  font-size: 17px;
+  padding: 5px 20px;
+  background: linear-gradient('red', 'blue');
+}
+
+#start-game {
+  display:none;
+}
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 1000;
+  display: none;
+}
+
+.pulsate {
+    font-weight: 700;
+    -webkit-animation: pulsate 0.5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.0;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.;
+    }
+}

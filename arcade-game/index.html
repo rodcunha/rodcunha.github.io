@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rodrigo's Frogger Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,700" rel="stylesheet">
+</head>
+<body>
+    <div id="header">Score: <span id="score">0</span> Lives: <span id="lives">3</span></div>
+
+    <button class="restart" onclick="startGame()">Start Game</button>
+
+
+    <!-- Start Game Modal -->
+    <div id="start-game" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="uppercase light">Ready for some Frogger fun?</h2>
+        <div id="instructions" class="hidden">
+              <h3>Game Controls</h3>
+              <p>Use <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> to move your player.</p>
+              <h3>How to Play</h3>
+              <p>Make 1000 points by collecting gems and reaching the water.</p>
+              <p>Water: 100 Pts<br>
+                 Star: 50 Pts<br>
+                 Orange Gem: 30 Pts<br>
+                 Green Gem: 20 Pts<br>
+                 Blue Gem: 10 Pts<br>
+              </p>
+              <p>Make sure you don't get bitten by a bug!!</p>
+        </div>
+        <button id="btnStart" onclick="startGame()">Start game</button>
+        <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
+
+        <!-- Game Over Modal -->
+        <div id="game-over" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="uppercase light">Oh! No! You died too many times!!!</h2>
+            <div id="instructions" class="hidden">
+                  <h3>Try Again?</h3>
+            </div>
+            <button id="btnStart" onclick="startGame()">Yes. Of Course!</button>
+            <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
+
+      </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-win" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="uppercase light">Fantastic! You've made it to 1000 points!</h2>
+        <div id="instructions" class="hidden">
+              <h3>Can you do better next time?</h3>
+        </div>
+        <button id="btnStart" onclick="startGame()">Yes. Of Course!</button>
+        <button class="btnClose" onclick="closeModal()">Nah! Maybe later</button>
+
+  </div>
+</div>
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
