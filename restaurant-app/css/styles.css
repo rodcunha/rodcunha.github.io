@@ -1,0 +1,387 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 17px;
+}
+
+html {
+	--main-color: #212121;
+	--header-color: #efefef;
+	--bg-color: #fdfdfd;
+}
+
+img {
+	width: 100%;
+}
+
+td,th,p{
+  font-size: 1rem;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-weight: 300;
+  display: block;
+}
+
+h1 {
+	margin: 0;
+	padding: 20px 15px;
+}
+
+body {
+	background-color: var(--bg-color);
+	margin: 0;
+	position:relative;
+	min-height: 100vh;
+	max-width: 100%;
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+
+nav {
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}
+
+nav h1 {
+	text-align: center;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+nav a {
+	color: var(--header-color);
+	text-decoration: none;
+	margin: none;
+	padding: none;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+}
+
+#content-container {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	margin-bottom: 70px;
+}
+
+#content-container select {
+	grid-column: span 2;
+}
+
+/* ====================== Map ====================== */
+#map-container {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 40vh;;
+}
+
+#map {
+	grid-column: 1 / -1;
+  background-color: #ccc;
+}
+
+/* =================== Fileter Options ================*/
+.filter-options {
+	background-color: #0060CC;
+	color: var(--header-color);
+	padding: 20px;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 20px;
+}
+
+.filter-options h2 {
+	grid-column: 1 / -1;
+	font-size: 1.4em;
+	margin: 0.5em;
+	color: white;
+}
+
+.filter-options select {
+	border: none;
+	font-size: 1.3rem;
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: #074481;
+	color: var(--header-color);
+}
+
+.filter-options label {
+  display: none;
+}
+
+@media screen and (min-width: 425px) {
+	.filter-options select {
+		grid-column: span 2;
+	}
+}
+
+/* ================ Footer ====================*/
+#footer {
+  background-color: #444;
+  color: var(--header-color);
+	margin: 0;
+  font-size: 9pt;
+  letter-spacing: 1px;
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#footer strong {
+  text-decoration: none;
+  font-weight: bold;
+  color: #efefef
+}
+
+#footer strong>a {
+  text-decoration: none;
+}
+
+#footer strong>a:hover {
+  color: #FF7300;
+}
+
+#footer strong>a:visited {
+  color: #fefefe;
+}
+
+/* ============= Restaurant Reviews =============*/
+
+#restaurants-list {
+	padding: 20px 15px;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: auto;
+	grid-column-gap: 5px;
+}
+
+#restaurants-list li {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 2px solid #ccc;
+		list-style-type: none;
+}
+
+#restaurants-list li > a {
+	background-color: transparent;
+	border: none;
+	color: #074481;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border: 2px solid #074481;
+}
+
+#restaurants-list li > a:hover {
+	background-color: #074481;
+	color: #fefefe;
+	transition: 0.5s;
+}
+
+@media screen and (max-width: 425px) {
+	#restaurants-list li {
+		grid-column: 1 / -1;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	#restaurants-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#restaurants-list li {
+		grid-column: 1fr;
+	}
+}
+
+/* ================ Restaurant Pages =================*/
+
+#maincontent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  grid-column-gap: 10px;
+}
+
+#restaurant-container {
+	padding: 10px;
+	background-color: #0060CC;
+  grid-column: 1 / -1;
+}
+
+#restaurant-container h1,
+#restaurant-container p,
+#restaurant-container tr,
+#restaurant-container td  {
+	color: #efefef;
+}
+
+#restaurant-img {
+  width: 460px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+#restaurant-cuisine {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+#reviews-container {
+	grid-column: 1 / -1;
+	margin-bottom: 90px;
+	padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#reviews-container h2 {
+	color: #0060CC;
+  grid-column: 1 / -1;
+}
+
+#reviews-container ul {
+	list-style-type: none;
+}
+
+#reviews-container ul > li {
+	background-color: #eee;
+	border: 2px solid #ccc;
+	border-radius: 15px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+#reviews-container ul > li p:first-child {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#reviews-list {
+  grid-column: 1 / -1;
+  padding: 0;
+}
+
+@media screen and (min-width: 550px) {
+  #restaurant-container {
+    grid-column: 1 / 4;
+    font-size: 0.8rem;
+  }
+
+  #restaurant-img {
+    grid-column: 1 / 2;
+  }
+
+  #reviews-container {
+  	grid-column: 4 / -1;
+    font-size: 0.8rem;
+  }
+
+  #reviews-list {
+    padding: 0.9eml
+  }
+}
+
+@media screen and (min-width: 460px) {
+  #restaurant-container {
+    grid-column: 1 / 5;
+    font-size: 0.8rem;
+  }
+
+  #reviews-container {
+    grid-column: 5 / -1;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #reviews-list {
+    grid-column: 1 / -1;
+    max-width: 960px;
+    display: block;
+    margin: 0 auto;
+  }
+  #reviews-list:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ================= breadcrumbs ======================*/
+
+#breadcrumb {
+    padding: 10px 40px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+		grid-column: 1 / -1;
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+    color: #0060CC;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/* ===================== Loading =================*/
+
+#loading {
+  background-color: #074481;
+  color: #efefef;
+  position:fixed; /*it can be fixed too*/
+  left:0; right:0;
+  top:0; bottom:0;
+  margin:auto;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+}
+
+#loading h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
